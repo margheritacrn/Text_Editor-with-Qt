@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>icon_save.ico</file>
+        <file>new_icon.png</file>
+        <file>Save-as-icon.png</file>
+        <file>open_icon.png</file>
+        <file>find.png</file>
+    </qresource>
+</RCC>

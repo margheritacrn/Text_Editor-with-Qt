@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Text_Editor</class>
+ <widget class="QMainWindow" name="Text_Editor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>810</width>
+    <height>603</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Text_Editor</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>811</width>
+      <height>591</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>810</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNuovo"/>
+    <addaction name="separator"/>
+    <addaction name="actionApri"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalva"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalva_con_nome"/>
+    <addaction name="separator"/>
+    <addaction name="actionEsci"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuSearch">
+    <property name="title">
+     <string>Search</string>
+    </property>
+    <addaction name="actionCerca_stringa"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSearch"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNuovo"/>
+   <addaction name="actionApri"/>
+   <addaction name="actionSalva"/>
+   <addaction name="actionSalva_con_nome"/>
+   <addaction name="actionCerca_stringa"/>
+  </widget>
+  <action name="actionNuovo">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/new_icon.png</normaloff>:/images/new_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionApri">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/open_icon.png</normaloff>:/images/open_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSalva">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icon_save.ico</normaloff>:/images/icon_save.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSalva_con_nome">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/Save-as-icon.png</normaloff>:/images/Save-as-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save as</string>
+   </property>
+  </action>
+  <action name="actionEsci">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionCerca_stringa">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/find.png</normaloff>:/images/find.png</iconset>
+   </property>
+   <property name="text">
+    <string>Search for a string</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionEsci</sender>
+   <signal>triggered()</signal>
+   <receiver>Text_Editor</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>301</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
